@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root{
+	/* primary */
+    --orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /* neutral */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+html{
+	font-size: 62.5%  /* 62.5% == 10px*/;
+	box-sizing: border-box;
+}
+*, *::before, *::after{
+	box-sizing: inherit;
+}
+body{
+	font-size: 1.6rem;
+	font-family: 'Lexend Deca', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 70rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 55%;
+    height: 50rem;
+    padding: 3rem;
+    display: grid;
+    grid-template-rows: min-content 2fr 1fr;
+    overflow: hidden;
+}
+.card--one{
+    background-color: var(--orange);
+    border-radius: 5px 5px 0 0;
+}
+.card--two{
+    background-color: var(--dark-cyan);
+}
+.card--three{
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 5px 5px;
+}
+.card__img{
+    width: 7rem;
+    margin: 0;
+}
+.card__img img{
+    width: 100%;
+
+}
+.card__title{
+    font-size: 4rem;
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--very-light-gray);
+}
+.card__texts{
+    color: var(--transparent-white);
+    font-size: 1.7rem;
+    line-height: 1.6;
+}
+.btn{
+    padding: 1rem 2rem;
+    justify-self: left;
+    align-self: center;
+    background-color: var(--very-light-gray);
+    border: 2px solid var(--transparent-white);
+    text-decoration: none;
+    border-radius: 20px;
+}
+.card--one .btn{
+    color: var(--orange);
+}
+.card--two .btn{
+    color: var(--dark-cyan);
+}
+.card--three .btn{
+    color: var(--very-dark-cyan);
+}
+.btn:hover{
+    background-color: transparent;
+    color: var(--very-light-gray);
+}
+.attribution{
+    text-align: center;
+	margin: 4rem 0;
+}
+@media(min-width: 768px){
+    .card{
+        width: 30%;
+        padding: 2rem 3.4rem;
+    }
+    .card--one{
+        border-radius: 5px 0 0 5px;
+    }
+    .card--three{
+        border-radius: 0 5px 5px 0;
+    }
+    .card__texts{
+        text-align: justify-all;
+    }
+}
